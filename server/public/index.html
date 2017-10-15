@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Calculator</title>
+        <link rel="stylesheet" href="styles/styles.css">
+        <script src="vendors/jquery.js"></script>
+        <script src="scripts/client.js"></script>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Handy Dandy Calculator</h1>
+        <div id="user input"></div>
+            <input id="inputOne">
+            <button id="multipy" class="action" data-action="x">x</button>
+            <button id="divide" class="action" data-action="/">÷</button>
+            <button id="subtract" class="action" data-action="-">-</button>
+            <button id="add" class="action" data-action="+">+</button>
+            <input id="inputTwo">
+            <button id="equals">=</button>
+            <span id=answer></span>
+        </div>
+        <div>
+            <button id="clearCalc">Clear Calculator</button><br>
+            <button id="clearAll">Clear All</button>
+        </div>
+        <div>
+            <h2>History:</h2>
+            <div id=history>
+            </div>
+        </div>
+    </body>
+</html>

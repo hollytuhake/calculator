@@ -1,0 +1,16 @@
+body{
+    font-family: sans-serif
+}
+
+button{
+    background-color: black;
+    color: white
+}
+
+.action{
+    font-size: 150%
+}
+
+#equals{
+    font-size: 150%
+}
