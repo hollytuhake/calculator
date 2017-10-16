@@ -18,6 +18,7 @@ var numberOne;
 var numberTwo;
 var math;
 var result;
+var history = [];
 
 //get the information and send the answer back
 app.post('/equation', function (req, res) {
@@ -27,10 +28,15 @@ app.post('/equation', function (req, res) {
     console.log(numberOne ,  math  , numberTwo);
     mathEquation(numberOne, math, numberTwo);
     result = {
+        x: numberOne,
+        y: numberTwo,
+        math: math,
         answer: answer
     }
+    history.unshift(result);
     console.log(result);
-    res.send(result);
+    console.log(history);
+    res.send(history);
 });
 
 //this function does the math

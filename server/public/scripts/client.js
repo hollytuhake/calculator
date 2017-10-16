@@ -3,7 +3,7 @@ function start(){
     console.log('jquery loaded');
     $(".action").on('click',$(this),transferData);
     $("#equals").on('click',getData);
-    $("#clearAll").on('click',clearData);
+    //$("#clearAll").on('click',clearData);
     $("#clearCalc").on('click',clearInputs);
 }
 
@@ -44,25 +44,17 @@ $.ajax({
 // this receives the answer and writes it in the dom (just realized during lecture the history was supposed
 // to be stored in the server...)
 .done(function (response) {
-    var displayedAnswer = response.answer;
+    console.log(response);
+    displayedAnswer = response[0].answer;
     $("#answer").text(displayedAnswer);
-    $("#history").append('<p>'+ x + math + y+ '=' +displayedAnswer+'</p>');
+    $("#history").empty();
+    for (i=0; i < response.length; i += 1) {
+        $("#history").append('<p>'+ response[i].x + response[i].math + response[i].y + '=' + response[i].answer + '</p>');
+    }
 });
 }
 
-//clearing the whole page
-function clearData(){
-    $("#history").text("");
-    $('#inputOne').val("");
-    $('#inputTwo').val("");
-    x = '';
-    y = '';
-    math = '';
-    $("#answer").text('');
-    $(".action").css('color', 'white');
-}
-
-//clearing just the calculator
+//clearing the calculator
 function clearInputs (){
     $('#inputOne').val("");
     $('#inputTwo').val("");
