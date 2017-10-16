@@ -41,7 +41,8 @@ $.ajax({
     }
 })
 
-//this receives the answer and writes it in the dom
+// this receives the answer and writes it in the dom (just realized during lecture the history was supposed
+// to be stored in the server...)
 .done(function (response) {
     var displayedAnswer = response.answer;
     $("#answer").text(displayedAnswer);

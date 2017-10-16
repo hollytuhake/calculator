@@ -21,8 +21,8 @@ var result;
 
 //get the information and send the answer back
 app.post('/equation', function (req, res) {
-    numberOne = parseInt(req.body.x);
-    numberTwo = parseInt(req.body.y);
+    numberOne = Number(req.body.x);
+    numberTwo = Number(req.body.y);
     math = req.body.math;
     console.log(numberOne ,  math  , numberTwo);
     mathEquation(numberOne, math, numberTwo);
