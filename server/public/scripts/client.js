@@ -6,6 +6,8 @@ function start(){
     $("#clearAll").on('click',clearData);
     $("#clearCalc").on('click',clearInputs);
 }
+
+//creating global variables to use later
 var x = 0
 var y = 0
 var math
@@ -38,6 +40,7 @@ $.ajax({
         math: math
     }
 })
+
 //this receives the answer and writes it in the dom
 .done(function (response) {
     var displayedAnswer = response.answer;
@@ -46,6 +49,7 @@ $.ajax({
 });
 }
 
+//clearing the whole page
 function clearData(){
     $("#history").text("");
     $('#inputOne').val("");
@@ -57,6 +61,7 @@ function clearData(){
     $(".action").css('color', 'white');
 }
 
+//clearing just the calculator
 function clearInputs (){
     $('#inputOne').val("");
     $('#inputTwo').val("");

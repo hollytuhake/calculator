@@ -12,13 +12,14 @@ app.listen(port, function () {
     console.log('listening on port ', port);
 });
 
+//creating global variables to use later
 var answer
 var numberOne;
 var numberTwo;
 var math;
 var result;
 
-//this gets the information and sends the answer back
+//get the information and send the answer back
 app.post('/equation', function (req, res) {
     numberOne = parseInt(req.body.x);
     numberTwo = parseInt(req.body.y);
