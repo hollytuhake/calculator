@@ -11,7 +11,32 @@
     </head>
     <body>
         <h1>Handy Dandy Calculator</h1>
+        <div id="display">
+
+        </div>
         <div id="user input"></div>
+            <button class="numberButton" data-number="7">7</button>
+            <button class="numberButton" data-number="8">8</button>
+            <button class="numberButton" data-number="9">9</button>
+            <button id="divide" class="action" data-action="/">÷</button>
+            <br>
+            <button class="numberButton" data-number="4">4</button>
+            <button class="numberButton" data-number="5">5</button>
+            <button class="numberButton" data-number="6">6</button>
+            <button id="multipy" class="action" data-action="x">x</button>
+            <br>
+            <button class="numberButton" data-number="1">1</button>
+            <button class="numberButton" data-number="2">2</button>
+            <button class="numberButton" data-number="3">3</button>
+            <button id="subtract" class="action" data-action="-">-</button>
+            <br>
+            <button id="equals">=</button>
+            <button class="numberButton" data-number="0">0</button>
+            <button class="numberButton" data-number=".">.</button>
+            <button id="add" class="action" data-action="+">+</button>
+            <br>
+            <button id="clearCalc">Clear</button>
+            <!-- begin old way
             <input id="inputOne">
             <button id="multipy" class="action" data-action="x">x</button>
             <button id="divide" class="action" data-action="/">÷</button>
@@ -20,10 +45,10 @@
             <input id="inputTwo">
             <button id="equals">=</button>
             <span id=answer></span>
+            end old way-->
         </div>
         <div>
-            <button id="clearCalc">Clear Calculator</button><br>
-            <!--<button id="clearAll">Clear All</button>-->
+           <!-- <button id="clearCalc">Clear Calculator</button> OLD WAY-->
         </div>
         <div>
             <h2>History:</h2>
