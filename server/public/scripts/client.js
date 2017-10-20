@@ -49,7 +49,7 @@ function onceClicked() {
             $("#answer").text(displayedAnswer);
             $("#history").empty();
             for (i = 0; i < response.length; i += 1) {
-                $("#history").append('<p>' + response[i].x + response[i].math + response[i].y + '=' + response[i].answer + '</p>');
+                $("#history").append('<p>' + response[i].x + ' ' + response[i].math + ' ' + response[i].y + ' = ' + response[i].answer + '</p>');
             }
         });
 }
